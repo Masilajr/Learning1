@@ -24,6 +24,44 @@ resolve ('Success');
     }).catch((message) => {
         console.log('This is in the catch' + message);
     });
+
+    fetch('https://reqres.in/api/users/2')
+    .then(res => {
+        if (res.ok) {
+            console.log('Success');
+        }else {
+            console.log('Fail');
+        }
+    })
+    .then(data => console.log(data))
+
+    let friends =
+    [
+    {
+    "name": "Steve",
+    "favNumber": 10,
+    "isProgrammer": false,
+    "hobbies": ["Weightlifting", "Football"],
+    "friends":[{
+    "name": "Hazel",
+    "favNumber": 65,
+    "isProgrammer": false,
+    "hobbies": ["Hiking", "Videogames"]
+        
+    },
+    {
+        "name": "Josh",
+        "favNumber": "17",
+        "isProgrammer": true,
+        "hobbies": ["Weightlifting", "Reading"]
+    }
+]
+
+}   
+]
+    console.log(friends)
+   
+
 </script>
 
 </body>
